@@ -32,7 +32,7 @@ const NavItem=({href,label,icon:Icon})=>{
 
 function Navbar() {
   return (
-        <header className="sticky top-0 z-30 flex items-center gap-4 justify-center border-b p-4 bg-background px-4 sm:static sm:h-auto sm:border-0 sm:px-6">
+        <header className="sticky  top-0 z-30 flex items-center gap-4 justify-center border-b  p-4 bg-background px-4 sm:static sm:h-auto  sm:px-6">
           <Sheet>
             <SheetTrigger asChild>
               <Button size="icon" variant="outline" className="sm:hidden">

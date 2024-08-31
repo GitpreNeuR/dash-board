@@ -2,11 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+
+::-webkit-scrollbar{
+  display:none;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
+
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -48,7 +55,10 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
+    --chart-6:207, 70%, 50%;
+    --chart-7: 330, 80%, 55%;
     --radius: 0.5rem;
+    
   }
   .dark {
     --background: 222.2 84% 4.9%;
@@ -75,6 +85,8 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+    --chart-6: 207, 70%, 40%;
+    --chart-7: 330, 80%, 45%;
   }
 }
 

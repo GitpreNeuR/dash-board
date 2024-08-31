@@ -1,5 +1,4 @@
 "use client"
-"use client"
 import * as React from "react"
 import { Area, AreaChart, CartesianGrid, XAxis } from "recharts"
 
@@ -29,100 +28,111 @@ import {
 export const description = "An interactive area chart"
 
 const chartData = [
-  { date: "2024-04-01", desktop: 222, mobile: 150 },
-  { date: "2024-04-02", desktop: 97, mobile: 180 },
-  { date: "2024-04-03", desktop: 167, mobile: 120 },
-  { date: "2024-04-04", desktop: 242, mobile: 260 },
-  { date: "2024-04-05", desktop: 373, mobile: 290 },
-  { date: "2024-04-06", desktop: 301, mobile: 340 },
-  { date: "2024-04-07", desktop: 245, mobile: 180 },
-  { date: "2024-04-08", desktop: 409, mobile: 320 },
-  { date: "2024-04-09", desktop: 59, mobile: 110 },
-  { date: "2024-04-10", desktop: 261, mobile: 190 },
-  { date: "2024-04-11", desktop: 327, mobile: 350 },
-  { date: "2024-04-12", desktop: 292, mobile: 210 },
-  { date: "2024-04-13", desktop: 342, mobile: 380 },
-  { date: "2024-04-14", desktop: 137, mobile: 220 },
-  { date: "2024-04-15", desktop: 120, mobile: 170 },
-  { date: "2024-04-16", desktop: 138, mobile: 190 },
-  { date: "2024-04-17", desktop: 446, mobile: 360 },
-  { date: "2024-04-18", desktop: 364, mobile: 410 },
-  { date: "2024-04-19", desktop: 243, mobile: 180 },
-  { date: "2024-04-20", desktop: 89, mobile: 150 },
-  { date: "2024-04-21", desktop: 137, mobile: 200 },
-  { date: "2024-04-22", desktop: 224, mobile: 170 },
-  { date: "2024-04-23", desktop: 138, mobile: 230 },
-  { date: "2024-04-24", desktop: 387, mobile: 290 },
-  { date: "2024-04-25", desktop: 215, mobile: 250 },
-  { date: "2024-04-26", desktop: 75, mobile: 130 },
-  { date: "2024-04-27", desktop: 383, mobile: 420 },
-  { date: "2024-04-28", desktop: 122, mobile: 180 },
-  { date: "2024-04-29", desktop: 315, mobile: 240 },
-  { date: "2024-04-30", desktop: 454, mobile: 380 },
-  { date: "2024-05-01", desktop: 165, mobile: 220 },
-  { date: "2024-05-02", desktop: 293, mobile: 310 },
-  { date: "2024-05-03", desktop: 247, mobile: 190 },
-  { date: "2024-05-04", desktop: 385, mobile: 420 },
-  { date: "2024-05-05", desktop: 481, mobile: 390 },
-  { date: "2024-05-06", desktop: 498, mobile: 520 },
-  { date: "2024-05-07", desktop: 388, mobile: 300 },
-  { date: "2024-05-08", desktop: 149, mobile: 210 },
-  { date: "2024-05-09", desktop: 227, mobile: 180 },
-  { date: "2024-05-10", desktop: 293, mobile: 330 },
-  { date: "2024-05-11", desktop: 335, mobile: 270 },
-  { date: "2024-05-12", desktop: 197, mobile: 240 },
-  { date: "2024-05-13", desktop: 197, mobile: 160 },
-  { date: "2024-05-14", desktop: 448, mobile: 490 },
-  { date: "2024-05-15", desktop: 473, mobile: 380 },
-  { date: "2024-05-16", desktop: 338, mobile: 400 },
-  { date: "2024-05-17", desktop: 499, mobile: 420 },
-  { date: "2024-05-18", desktop: 315, mobile: 350 },
-  { date: "2024-05-19", desktop: 235, mobile: 180 },
-  { date: "2024-05-20", desktop: 177, mobile: 230 },
-  { date: "2024-05-21", desktop: 82, mobile: 140 },
-  { date: "2024-05-22", desktop: 81, mobile: 120 },
-  { date: "2024-05-23", desktop: 252, mobile: 290 },
-  { date: "2024-05-24", desktop: 294, mobile: 220 },
-  { date: "2024-05-25", desktop: 201, mobile: 250 },
-  { date: "2024-05-26", desktop: 213, mobile: 170 },
-  { date: "2024-05-27", desktop: 420, mobile: 460 },
-  { date: "2024-05-28", desktop: 233, mobile: 190 },
-  { date: "2024-05-29", desktop: 78, mobile: 130 },
-  { date: "2024-05-30", desktop: 340, mobile: 280 },
-  { date: "2024-05-31", desktop: 178, mobile: 230 },
-  { date: "2024-06-01", desktop: 178, mobile: 200 },
-  { date: "2024-06-02", desktop: 470, mobile: 410 },
-  { date: "2024-06-03", desktop: 103, mobile: 160 },
-  { date: "2024-06-04", desktop: 439, mobile: 380 },
-  { date: "2024-06-05", desktop: 88, mobile: 140 },
-  { date: "2024-06-06", desktop: 294, mobile: 250 },
-  { date: "2024-06-07", desktop: 323, mobile: 370 },
-  { date: "2024-06-08", desktop: 385, mobile: 320 },
-  { date: "2024-06-09", desktop: 438, mobile: 480 },
-  { date: "2024-06-10", desktop: 155, mobile: 200 },
-  { date: "2024-06-11", desktop: 92, mobile: 150 },
-  { date: "2024-06-12", desktop: 492, mobile: 420 },
-  { date: "2024-06-13", desktop: 81, mobile: 130 },
-  { date: "2024-06-14", desktop: 426, mobile: 380 },
-  { date: "2024-06-15", desktop: 307, mobile: 350 },
-  { date: "2024-06-16", desktop: 371, mobile: 310 },
-  { date: "2024-06-17", desktop: 475, mobile: 520 },
-  { date: "2024-06-18", desktop: 107, mobile: 170 },
-  { date: "2024-06-19", desktop: 341, mobile: 290 },
-  { date: "2024-06-20", desktop: 408, mobile: 450 },
-  { date: "2024-06-21", desktop: 169, mobile: 210 },
-  { date: "2024-06-22", desktop: 317, mobile: 270 },
-  { date: "2024-06-23", desktop: 480, mobile: 530 },
-  { date: "2024-06-24", desktop: 132, mobile: 180 },
-  { date: "2024-06-25", desktop: 141, mobile: 190 },
-  { date: "2024-06-26", desktop: 434, mobile: 380 },
-  { date: "2024-06-27", desktop: 448, mobile: 490 },
-  { date: "2024-06-28", desktop: 149, mobile: 200 },
-  { date: "2024-06-29", desktop: 103, mobile: 160 },
-  { date: "2024-06-30", desktop: 446, mobile: 400 },
+  
+  { date: "2024-04-01", online: 222, inStore: 150 },
+  { date: "2024-04-02", online: 97, inStore: 180 },
+  { date: "2024-04-03", online: 167, inStore: 120 },
+  { date: "2024-04-04", online: 242, inStore: 260 },
+  { date: "2024-04-05", online: 373, inStore: 290 },
+  { date: "2024-04-06", online: 301, inStore: 340 },
+  { date: "2024-04-07", online: 245, inStore: 180 },
+  { date: "2024-04-08", online: 409, inStore: 320 },
+  { date: "2024-04-09", online: 59, inStore: 110 },
+  { date: "2024-04-10", online: 261, inStore: 190 },
+  { date: "2024-04-11", online: 327, inStore: 350 },
+  { date: "2024-04-12", online: 292, inStore: 210 },
+  { date: "2024-04-13", online: 342, inStore: 380 },
+  { date: "2024-04-14", online: 137, inStore: 220 },
+  { date: "2024-04-15", online: 120, inStore: 170 },
+  { date: "2024-04-16", online: 138, inStore: 190 },
+  { date: "2024-04-17", online: 446, inStore: 360 },
+  { date: "2024-04-18", online: 364, inStore: 410 },
+  { date: "2024-04-19", online: 243, inStore: 180 },
+  { date: "2024-04-20", online: 89, inStore: 150 },
+  { date: "2024-04-21", online: 137, inStore: 200 },
+  { date: "2024-04-22", online: 224, inStore: 170 },
+  { date: "2024-04-23", online: 138, inStore: 230 },
+  { date: "2024-04-24", online: 387, inStore: 290 },
+  { date: "2024-04-25", online: 215, inStore: 250 },
+  { date: "2024-04-26", online: 75, inStore: 130 },
+  { date: "2024-04-27", online: 383, inStore: 420 },
+  { date: "2024-04-28", online: 122, inStore: 180 },
+  { date: "2024-04-29", online: 315, inStore: 240 },
+  { date: "2024-04-30", online: 454, inStore: 380 },
+  { date: "2024-05-01", online: 165, inStore: 220 },
+  { date: "2024-05-02", online: 293, inStore: 310 },
+  { date: "2024-05-03", online: 247, inStore: 190 },
+  { date: "2024-05-04", online: 385, inStore: 420 },
+  { date: "2024-05-05", online: 481, inStore: 390 },
+  { date: "2024-05-06", online: 498, inStore: 520 },
+  { date: "2024-05-07", online: 388, inStore: 300 },
+  { date: "2024-05-08", online: 149, inStore: 210 },
+  { date: "2024-05-09", online: 227, inStore: 180 },
+  { date: "2024-05-10", online: 293, inStore: 330 },
+  { date: "2024-05-11", online: 335, inStore: 270 },
+  { date: "2024-05-12", online: 197, inStore: 240 },
+  { date: "2024-05-13", online: 197, inStore: 160 },
+  { date: "2024-05-14", online: 448, inStore: 490 },
+  { date: "2024-05-15", online: 473, inStore: 380 },
+  { date: "2024-05-16", online: 338, inStore: 400 },
+  { date: "2024-05-17", online: 499, inStore: 420 },
+  { date: "2024-05-18", online: 315, inStore: 350 },
+  { date: "2024-05-19", online: 235, inStore: 180 },
+  { date: "2024-05-20", online: 177, inStore: 230 },
+  { date: "2024-05-21", online: 82, inStore: 140 },
+  { date: "2024-05-22", online: 81, inStore: 120 },
+  { date: "2024-05-23", online: 252, inStore: 290 },
+  { date: "2024-05-24", online: 294, inStore: 220 },
+  { date: "2024-05-25", online: 201, inStore: 250 },
+  { date: "2024-05-26", online: 213, inStore: 170 },
+  { date: "2024-05-27", online: 420, inStore: 460 },
+  { date: "2024-05-28", online: 233, inStore: 190 },
+  { date: "2024-05-29", online: 78, inStore: 130 },
+  { date: "2024-05-30", online: 340, inStore: 280 },
+  { date: "2024-05-31", online: 178, inStore: 230 },
+  { date: "2024-06-01", online: 178, inStore: 200 },
+  { date: "2024-06-02", online: 470, inStore: 410 },
+  { date: "2024-06-03", online: 103, inStore: 160 },
+  { date: "2024-06-04", online: 439, inStore: 380 },
+  { date: "2024-06-05", online: 88, inStore: 140 },
+  { date: "2024-06-06", online: 294, inStore: 250 },
+  { date: "2024-06-07", online: 323, inStore: 370 },
+  { date: "2024-06-08", online: 385, inStore: 320 },
+  { date: "2024-06-09", online: 438, inStore: 480 },
+  { date: "2024-06-10", online: 155, inStore: 200 },
+  { date: "2024-06-11", online: 92, inStore: 150 },
+  { date: "2024-06-12", online: 492, inStore: 420 },
+  { date: "2024-06-13", online: 81, inStore: 130 },
+  { date: "2024-06-14", online: 426, inStore: 380 },
+  { date: "2024-06-15", online: 307, inStore: 350 },
+  { date: "2024-06-16", online: 371, inStore: 310 },
+  { date: "2024-06-17", online: 475, inStore: 520 },
+  { date: "2024-06-18", online: 107, inStore: 170 },
+  { date: "2024-06-19", online: 341, inStore: 290 },
+  { date: "2024-06-20", online: 408, inStore: 450 },
+  { date: "2024-06-21", online: 169, inStore: 210 },
+  { date: "2024-06-22", online: 317, inStore: 270 },
+  { date: "2024-06-23", online: 480, inStore: 530 },
+  { date: "2024-06-24", online: 132, inStore: 180 },
+  { date: "2024-06-25", online: 141, inStore: 190 },
+  { date: "2024-06-26", online: 434, inStore: 380 },
+  { date: "2024-06-27", online: 448, inStore: 490 },
+  { date: "2024-06-28", online: 149, inStore: 200 },
+  { date: "2024-06-29", online: 103, inStore: 160 },
+  { date: "2024-06-30", online: 446, inStore: 400 },
 ]
 
-
+const chartConfig = {
+  online: {
+    label: "Online",
+    color: "hsl(var(--chart-1))",
+  },
+  inStore: {
+    label: "In-Store",
+    color: "hsl(var(--chart-2))",
+  },
+ 
+};
 
 export default function AreaChartCard() {
   const [timeRange, setTimeRange] = React.useState("90d")
@@ -144,7 +154,7 @@ export default function AreaChartCard() {
     <Card>
       <CardHeader className="flex items-center gap-2 space-y-0 border-b py-5 sm:flex-row">
         <div className="grid flex-1 gap-1 text-center sm:text-left">
-          <CardTitle>Area Chart - Interactive</CardTitle>
+          <CardTitle className="text-lg">Area Chart - Interactive</CardTitle>
           <CardDescription>
             Showing total visitors for the last 3 months
           </CardDescription>
@@ -171,32 +181,32 @@ export default function AreaChartCard() {
       </CardHeader>
       <CardContent className="px-2 pt-4 sm:px-6 sm:pt-6">
         <ChartContainer
-          
+          config={chartConfig}
           className="aspect-auto h-[250px] w-full"
         >
           <AreaChart data={filteredData}>
             <defs>
-              <linearGradient id="fillDesktop" x1="0" y1="0" x2="0" y2="1">
+              <linearGradient id="fillonline" x1="0" y1="0" x2="0" y2="1">
                 <stop
                   offset="5%"
-                  stopColor="var(--color-desktop)"
+                  stopColor="var(--color-online)"
                   stopOpacity={0.8}
                 />
                 <stop
                   offset="95%"
-                  stopColor="var(--color-desktop)"
+                  stopColor="var(--color-online)"
                   stopOpacity={0.1}
                 />
               </linearGradient>
-              <linearGradient id="fillMobile" x1="0" y1="0" x2="0" y2="1">
+              <linearGradient id="fillinStore" x1="0" y1="0" x2="0" y2="1">
                 <stop
                   offset="5%"
-                  stopColor="var(--color-mobile)"
+                  stopColor="var(--color-inStore)"
                   stopOpacity={0.8}
                 />
                 <stop
                   offset="95%"
-                  stopColor="var(--color-mobile)"
+                  stopColor="var(--color-inStore)"
                   stopOpacity={0.1}
                 />
               </linearGradient>
@@ -231,17 +241,17 @@ export default function AreaChartCard() {
               }
             />
             <Area
-              dataKey="mobile"
+              dataKey="inStore"
               type="natural"
-              fill="url(#fillMobile)"
-              stroke="var(--color-mobile)"
+              fill="url(#fillinStore)"
+              stroke="var(--color-inStore)"
               stackId="a"
             />
             <Area
-              dataKey="desktop"
+              dataKey="online"
               type="natural"
-              fill="url(#fillDesktop)"
-              stroke="var(--color-desktop)"
+              fill="url(#fillonline)"
+              stroke="var(--color-online)"
               stackId="a"
             />
             <ChartLegend content={<ChartLegendContent />} />
